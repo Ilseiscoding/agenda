@@ -1,0 +1,46 @@
+# Ejercicio para calmar la ansiedad
+print("Bienvenido a tu acompañamiento durante este proceso de ansiedad")
+print("Vamos a enumerar cosas que pueden percibir tus sentidos")
+
+
+
+#Creación de listas para que ahí se almacene los elementos
+#5 cosas que se puedan ver
+#4 cosas que puedas escuchar
+#3 cosas que puedas saborear
+#2 cosas que puedas oler
+#1 cosa que puedas tocar
+vista = []
+oido = []
+gusto =[]
+olfato = []
+tacto = []
+
+
+#Pedir al usuario que enumere las cosas para cada sentido
+print("Piensa en 5 cosas que puedes ver")
+for i in range(5):
+    item = input(f"Elemento {i+1}: ")
+    vista.append(item)
+    
+print("\nPiensa en 4 cosas que puedes oir")
+for i in range(4):
+    item = input(f"Elemento {i+1}: ")
+    oido.append(item)
+    
+print("\nPiensa en 3 cosas que puedes saborear")
+for i in range(3):
+    item = input(f"Elemento {i+1}: ")
+    gusto.append(item)
+    
+print("\nPiensa en 2 cosas que puedes oler")
+for i in range(2):
+    item = input(f"Elemento {i+1}: ")
+    olfato.append(item)
+    
+
+print("\nPiensa en 1 cosa que puedes tocar")
+for i in range(1):
+    item = input(f"Elemento {i+1}: ")
+    tacto.append(item)
+
