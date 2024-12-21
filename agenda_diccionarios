@@ -1,0 +1,58 @@
+# Crear un diccionario vacío para la agenda
+agenda = {}
+
+# Bucle principal del programa
+while True:
+    print("\n--- Menú de la Agenda ---")
+    print("1. Añadir alumno y email")
+    print("2. Buscar email de un alumno")
+    print("3. Actualizar email de un alumno")
+    print("4. Mostrar todos los alumnos y sus emails")
+    print("5. Salir")
+    
+    opcion = input("Elige una opción (1-5): ")
+    
+    if opcion == "1":
+        # Añadir un alumno
+        nombre = input("Ingresa el nombre del alumno: ")
+        email = input("Ingresa el email del alumno: ")
+        if nombre in agenda:
+            print(f"{nombre} ya está en la agenda con el email {agenda[nombre]}.")
+        else:
+            agenda[nombre] = email
+            print(f"Alumno {nombre} añadido con éxito.")
+
+    elif opcion == "2":
+        # Buscar email de un alumno
+        nombre = input("Ingresa el nombre del alumno que quieres buscar: ")
+        if nombre in agenda:
+            print(f"El email de {nombre} es: {agenda[nombre]}")
+        else:
+            print(f"{nombre} no está en la agenda.")
+
+    elif opcion == "3":
+        # Actualizar el email de un alumno
+        nombre = input("Ingresa el nombre del alumno cuyo email quieres actualizar: ")
+        if nombre in agenda:
+            nuevo_email = input(f"Ingresa el nuevo email para {nombre}: ")
+            agenda[nombre] = nuevo_email
+            print(f"Email de {nombre} actualizado con éxito.")
+        else:
+            print(f"{nombre} no está en la agenda.")
+
+    elif opcion == "4":
+        # Mostrar todos los alumnos y sus emails
+        if agenda:
+            print("\n--- Lista de alumnos y emails ---")
+            for nombre, email in agenda.items():
+                print(f"{nombre}: {email}")
+        else:
+            print("La agenda está vacía.")
+
+    elif opcion == "5":
+        # Salir del programa
+        print("¡Hasta luego!")
+        break
+
+    else:
+        print("Opción no válida. Por favor, elige una opción entre 1 y 5.")
